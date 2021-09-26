@@ -1,0 +1,10 @@
+version: '2.4'
+
+services:
+  admin:
+    image: gunny26/admin:latest.armv7l
+    build: .
+    restart: unless-stopped
+    container_name: admin
+    ports:
+      - 2222:22/tcp
